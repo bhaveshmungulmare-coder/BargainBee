@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BargainBee - Compare Local Prices</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f8f4;
+            color: #172536;
+            margin: 0;
+        }
+
+        header {
+            background-color: white;
+            padding: 18px;
+            border-bottom: 1px solid #dddddd;
+        }
+
+        h1, h2, h3 {
+            margin-top: 8px;
+        }
+
+        .logo {
+            color: #159447;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        nav {
+            background-color: white;
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #dddddd;
+        }
+
+        nav a {
+            color: #087d39;
+            text-decoration: none;
+            margin: 8px;
+            font-weight: bold;
+        }
+
+        section {
+            background-color: white;
+            margin: 18px auto;
+            padding: 18px;
+            width: 90%;
+            max-width: 900px;
+            border: 1px solid #dddddd;
+            border-radius: 12px;
+        }
+
+        .green {
+            color: #138b43;
+        }
+
+        .banner {
+            background-color: #e9f8e9;
+            padding: 18px;
+            border-radius: 10px;
+        }
+
+        .search {
+            width: 90%;
+            padding: 12px;
+            border: 1px solid #bbbbbb;
+            border-radius: 20px;
+            margin: 8px 0;
+        }
+
+        .category {
+            display: inline-block;
+            background-color: #eaf7e9;
+            padding: 12px;
+            margin: 5px;
+            border-radius: 8px;
+        }
+
+        .product {
+            display: inline-block;
+            background-color: #ffffff;
+            border: 1px solid #dddddd;
+            border-radius: 10px;
+            padding: 14px;
+            margin: 7px;
+            width: 220px;
+            vertical-align: top;
+        }
+
+        .product-image {
+            background-color: #eef8ed;
+            font-size: 55px;
+            text-align: center;
+            padding: 18px;
+            border-radius: 8px;
+        }
+
+        .price {
+            color: #138b43;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #159447;
+            color: white;
+            padding: 10px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            margin-top: 8px;
+        }
+
+        .store {
+            border: 1px solid #dddddd;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+
+        .map {
+            background-color: #e8eee8;
+            padding: 45px 10px;
+            text-align: center;
+            font-size: 22px;
+            border-radius: 8px;
+        }
+
+        .profile-row {
+            padding: 13px;
+            border-bottom: 1px solid #dddddd;
+        }
+
+        footer {
+            background-color: #eaf7e9;
+            color: #176b36;
+            text-align: center;
+            padding: 18px;
+            margin-top: 20px;
+        }
+
+        @media screen and (max-width: 600px) {
+            nav a {
+                display: inline-block;
+                margin: 7px;
+            }
+
+            .product {
+                width: 85%;
+            }
+
+            section {
+                width: 88%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">🐝 BargainBee</div>
+        <p>Find the best price near you!</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#compare">Compare</a>
+        <a href="#product">Product</a>
+        <a href="#store">Store Location</a>
+        <a href="#profile">Profile</a>
+    </nav>
+
+    <!-- HOME PAGE -->
+    <section id="home">
+        <div class="banner">
+            <h1>Find the best price near you</h1>
+            <p>Compare local store prices. Save more.</p>
+        </div>
+
+        <h3>Search Products</h3>
+        <input class="search" type="text" placeholder="Search products or brands">
+
+        <h3>Categories</h3>
+        <div class="category">🛒 Groceries</div>
+        <div class="category">💻 Electronics</div>
+        <div class="category">🏠 Home</div>
+        <div class="category">👕 Fashion</div>
+
+        <h3>Best Deals Near You</h3>
+
+        <div class="product">
+            <div class="product-image">🍚</div>
+            <h3>India Gate Basmati Rice 5 kg</h3>
+            <p class="price">₹549</p>
+            <p>Available at 3 local stores</p>
+            <a class="button" href="#product">View Product</a>
+        </div>
+
+        <div class="product">
+            <div class="product-image">🧴</div>
+            <h3>Surf Excel 2 kg</h3>
+            <p class="price">₹385</p>
+            <p>Available at 4 local stores</p>
+            <a class="button" href="#compare">Compare Price</a>
+        </div>
+
+        <h3>Lowest Price Nearby</h3>
+        <div class="store">
+            <h3>Shree Mart</h3>
+            <p>📍 1.2 km away</p>
+            <p>Basmati Rice 5 kg</p>
+            <p class="price">₹549 - Lowest Price</p>
+            <a class="button" href="#store">View Store</a>
+        </div>
+    </section>
+
+    <!-- COMPARE PAGE -->
+    <section id="compare">
+        <h1>Compare Prices</h1>
+        <input class="search" type="text" placeholder="Search for a product">
+
+        <p>
+            <span class="category">All</span>
+            <span class="category">Groceries</span>
+            <span class="category">Electronics</span>
+            <span class="category">Home</span>
+            <span class="category">Fashion</span>
+        </p>
+
+        <h3>India Gate Basmati Rice 5 kg</h3>
+
+        <div class="store">
+            <h3>Shree Mart</h3>
+            <p>📍 1.2 km away | ⭐ 4.6 rating</p>
+            <p class="price">₹549</p>
+            <a class="button" href="#store">View Store</a>
+        </div>
+
+        <div class="store">
+            <h3>Vijay Stores</h3>
+            <p>📍 1.5 km away | ⭐ 4.3 rating</p>
+            <p class="price">₹569</p>
+            <a class="button" href="#store">View Store</a>
+        </div>
+
+        <div class="store">
+            <h3>Metro Mart</h3>
+            <p>📍 2.0 km away | ⭐ 4.4 rating</p>
+            <p class="price">₹575</p>
+            <a class="button" href="#store">View Store</a>
+        </div>
+
+        <div class="banner">
+            <h3>💡 Good to know!</h3>
+            <p>You can save ₹26 by shopping at Shree Mart.</p>
+        </div>
+    </section>
+
+    <!-- PRODUCT DETAILS PAGE -->
+    <section id="product">
+        <h1>Product Details</h1>
+
+        <div class="product-image">🍚</div>
+        <h2>India Gate Basmati Rice 5 kg</h2>
+        <p>⭐ 4.6 (12,450 reviews)</p>
+        <p>✔ Verified Product</p>
+
+        <p class="price">₹549</p>
+        <p><del>₹620</del> &nbsp; 11% OFF</p>
+
+        <div class="banner">
+            <h3>🏆 Lowest Price Found!</h3>
+            <p>Get the best price at Shree Mart.</p>
+        </div>
+
+        <h2>Available At</h2>
+
+        <div class="store">
+            <h3>Shree Mart</h3>
+            <p>📍 1.2 km away</p>
+            <p class="price">₹549</p>
+            <a class="button" href="#store">View Store</a>
+        </div>
+
+        <div class="store">
+            <h3>Vijay Stores</h3>
+            <p>📍 1.5 km away</p>
+            <p class="price">₹569</p>
+            <a class="button" href="#store">View Store</a>
+        </div>
+
+        <div class="store">
+            <h3>Metro Mart</h3>
+            <p>📍 2.0 km away</p>
+            <p class="price">₹575</p>
+            <a class="button" href="#store">View Store</a>
+        </div>
+    </section>
+
+    <!-- STORE LOCATION PAGE -->
+    <section id="store">
+        <h1>Store Location</h1>
+
+        <div class="map">
+            📍 Map Preview
+            <p>Current Location → Shree Mart</p>
+        </div>
+
+        <h2>Shree Mart</h2>
+        <p>📍 1.2 km away</p>
+        <p>⭐ 4.6 (1.2k reviews)</p>
+
+        <p>
+            <a class="button" href="tel:0000000000">Call</a>
+            <a class="button" href="https://www.google.com/maps">Directions</a>
+        </p>
+
+        <h3>Store Address</h3>
+        <p>123 Market Road,<br>Nagpur, Maharashtra - 440001</p>
+
+        <h3>Store Timings</h3>
+        <p>Monday - Sunday: 8:00 AM - 10:00 PM</p>
+
+        <div class="banner">
+            <h3>✔ Best Price for your product</h3>
+            <p>₹549 at this store</p>
+        </div>
+
+        <a class="button" href="#home">Visit Store</a>
+    </section>
+
+    <!-- PROFILE PAGE -->
+    <section id="profile">
+        <h1>My Profile</h1>
+
+        <div class="banner">
+            <h2>👤 Mohammad Uzaif</h2>
+            <p>+91 98765 43210</p>
+            <p>👑 Premium Member</p>
+        </div>
+
+        <p>Total Searches: 12</p>
+        <p>Comparisons: 8</p>
+        <p>Your Rating: ⭐ 4.6</p>
+
+        <div class="banner">
+            <h3>🏆 You're saving more!</h3>
+            <p>You have saved ₹245 so far.</p>
+        </div>
+
+        <div class="profile-row">📋 My Orders</div>
+        <div class="profile-row">♡ My Wishlist</div>
+        <div class="profile-row">🔔 Notifications (2)</div>
+        <div class="profile-row">📍 Saved Addresses</div>
+        <div class="profile-row">💳 Payment Methods</div>
+        <div class="profile-row">🎧 Help & Support</div>
+        <div class="profile-row">ⓘ About BargainBee</div>
+        <div class="profile-row">↗ Share App</div>
+        <div class="profile-row">⇥ Log Out</div>
+
+        <div class="banner">
+            <h3>🎁 Invite your friends</h3>
+            <p>Get ₹50 cashback on their first order.</p>
+            <a class="button" href="#home">Invite Now</a>
+        </div>
+    </section>
+
+    <footer>
+        <h2>BargainBee</h2>
+        <p>Compare prices. Save money. Shop smart!</p>
+        <p>Home | Compare | Product | Profile</p>
+    </footer>
+
+</body>
+</html>
